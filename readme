@@ -1,4 +1,4 @@
-A tiny jQuery plugin for generating hardware accelerated webkit transition accordions, ideally suited for iOS web apps.
+A tiny jQuery plugin, with minimal [semantic] markup, for generating hardware accelerated webkit transition accordions, ideally suited for iOS web apps.
 
 Usage
 
@@ -20,6 +20,7 @@ Issues/bugs
 - CSS line-height currently has to be taken into consideration
 - Uses ontouchstart mobile webkit event
 - Does not use live event queries
+- The initial 'collapse' of the list is a visible transition
 
 
 To-do
@@ -27,3 +28,5 @@ To-do
 - Add other vendor transition prefixes
 - Calculate line-height and add to height values
 - Allow for click events for desktop usage
+- Add :target selector support for RESTful url usage
+- Add support for ordered and definition lists
