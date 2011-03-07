@@ -2,11 +2,13 @@
 	$.fn.accordion = function() {
 		var liHeight
 		var liAnchorHeight;
+		
+		var el = this;
 	
 		liHeight = new Array();
 		liAnchorHeight = new Array();
 	
-		$('li').each(function(i) {
+		el.find('li').each(function(i) {
 			var li = $(this);
 			liHeight[i] = li.outerHeight();
 			var liAnchor = li.find('a:first').addClass('open-accordion');
@@ -14,7 +16,7 @@
 			li.css('height', liAnchorHeight[i]);
 		});
 	
-		$('.open-accordion').bind('touchstart', function() {
+		el.find('.open-accordion').bind('touchstart', function() {
 			var toExpand = $(this).parent();
 			var i = toExpand.index();
 
