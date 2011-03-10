@@ -10,7 +10,7 @@ ul {
 		margin: 0 0 10px 0;
 		padding: 0;
 		overflow: hidden;
-		-webkit-transition: all 0.4s ease;
+		-webkit-transition: height 0.4s ease;
 	}
 		ul li p {
 			margin: 0 0 10px 0;

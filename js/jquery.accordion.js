@@ -28,14 +28,16 @@
 				var active = toExpand.parent().find('#active');
 
 				if (active) {
+					var activeI = active.index();
+
 					active
-						.css('height', liAnchorHeight[i])
+						.css('height', liAnchorHeight[activeI])
 						.removeAttr('id');
 				}
 
 				toExpand
 					.attr('id', 'active')
-					.css('height', (liHeight[i]+liAnchorHeight[i])-20+'px');
+					.css('height', liHeight[i]+'px');
 			}
 
 			return false;
