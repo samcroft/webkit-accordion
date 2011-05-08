@@ -9,7 +9,6 @@
 		el.find('dd').each(function(i){
 			var dd = $(this);
 			ddHeight[i] = dd.height();
-			console.log(ddHeight[i]);
 			dd.addClass('closed')
 		});
 		
@@ -18,7 +17,6 @@
 			
 			var toExpand = $(this).parent().next('dd');
 			var i = toExpand.index('dd');
-			console.log(i);
 			
 			if (toExpand.attr('id') == 'active') {
 				toExpand
