@@ -1,46 +1,45 @@
 (function($){
 	$.fn.accordion = function() {
-		var liHeight
-		var liAnchorHeight;
-		
 		var el = this;
-	
-		liHeight = new Array();
-		liAnchorHeight = new Array();
-	
-		el.find('li').each(function(i) {
-			var li = $(this);
-			liHeight[i] = li.outerHeight();
-			var liAnchor = li.find('a:first').addClass('open-accordion');
-			liAnchorHeight[i] = liAnchor.outerHeight();
-			li.css('height', liAnchorHeight[i]);
-		});
-	
-		el.find('.open-accordion').bind('touchstart', function() {
-			var toExpand = $(this).parent();
-			var i = toExpand.index();
+		var ddHeight;
+		ddHeight = new Array();
+		
+		el.addClass('enhance');
 
+		el.find('dd').each(function(i){
+			var dd = $(this);
+			ddHeight[i] = dd.height();
+			console.log(ddHeight[i]);
+			dd.addClass('closed')
+		});
+		
+		el.find('dt a').bind('touchstart', function(e) {
+			e.preventDefault();
+			
+			var toExpand = $(this).parent().next('dd');
+			var i = toExpand.index('dd');
+			console.log(i);
+			
 			if (toExpand.attr('id') == 'active') {
 				toExpand
-					.css('height', liAnchorHeight[i])
-					.removeAttr('id');
+					.removeAttr('id')
+					.removeAttr('style')
+					.addClass('closed');
 			} else {
 				var active = toExpand.parent().find('#active');
 
 				if (active) {
-					var activeI = active.index();
-
 					active
-						.css('height', liAnchorHeight[activeI])
-						.removeAttr('id');
+						.removeAttr('id')
+						.removeAttr('style')
+						.addClass('closed');
 				}
 
 				toExpand
 					.attr('id', 'active')
-					.css('height', liHeight[i]+'px');
+					.css('height', ddHeight[i]+'px')
+					.removeClass('closed');
 			}
-
-			return false;
 		});
 	}
 })(jQuery);
