@@ -1,32 +1,22 @@
-A tiny jQuery plugin, with minimal [semantic] markup, for generating hardware accelerated webkit transition accordions, ideally suited for iOS web apps.
+A tiny jQuery plugin, with minimal [semantic] markup, for generating hardware accelerated CSS transition accordions, making them perfectly suited for mobile webkit web/PhoneGap apps.
 
 Usage
 
-$('ul').accordion();
+$('dl').accordion();
 
-<ul>
-	<li><a href="">Your link title</a>
+<dl>
+	<dt><a href="">Your link title</a></dt>
+	<dd>
 		<p>Your content.</p>
-	</li>
-	<li><a href="">Your link title</a>
+	</dd>
+	<dt><a href="">Your link title</dt>
+	<dd>
 		<p>Your content.</p>
-	</li>
-</ul>
+	</dd>
+</dl>
 
-
-
-Issues/bugs
-
-- CSS line-height currently has to be taken into consideration
-- Uses ontouchstart mobile webkit event
-- Does not use live event queries
-- The initial 'collapse' of the list is a visible transition
 
 
 To-do
 
-- Add other vendor transition prefixes
-- Calculate line-height and add to height values
-- Allow for click events for desktop usage
-- Add :target selector support for RESTful url usage
-- Add support for ordered and definition lists
+- Add :target selector/hash fragment support for RESTful url usage
