@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+	<title>Lightweight mobile webkit CSS/jQuery accordion, perfect for use in web/PhoneGap apps</title>
+	
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js'></script>
+	
+	<link href="../accordion.css" rel="stylesheet">
+	<script src="../jquery.accordion.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('dl').accordion();
+		});
+	</script>
+</head>
+<body>
+	<p>
+		<mark>This demo will only work on mobile webkit/safari devices (or the Xcode iPhone simulator) that use the 'touchstart' event.</mark>
+	</p>
+	
+	<dl>
+		<dt><a href="#">Knight Rider</a></dt>
+		<dd>
+			<p>Knight Rider, a shadowy flight into the dangerous world of a man who does not exist. Michael Knight, a young loner on a crusade to champion the cause of the innocent, the helpless in a world of criminals who operate above the law.</p>
+		</dd>
+		<dt><a href="#">Thundercats</a></dt>
+		<dd>
+			<p>Thunder, thunder, thundercats, Ho! Thundercats are on the move, Thundercats are loose. Feel the magic, hear the roar, Thundercats are loose. Thunder, thunder, thunder, Thundercats! Thunder, thunder, thunder, Thundercats! Thunder, thunder, thunder, Thundercats! Thunder, thunder, thunder, Thundercats! Thundercats!</p>
+		</dd>
+		<dt><a href="#">The A-Team</a></dt>
+		<dd>
+			<p>Ten years ago a crack commando unit was sent to prison by a military court for a crime they didn't commit. These men promptly escaped from a maximum security stockade to the Los Angeles underground. Today, still wanted by the government, they survive as soldiers of fortune. If you have a problem and no one else can help, and if you can find them, maybe you can hire the A-team.</p>
+		</dd>
+	</dl>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+body {
+	font: 14px/1.2 Helvetica;
+}
+
+dl {
+	margin: 20px;
+	padding: 0;
+	width: 250px;
+}
+	dl dt {
+		margin: 10px 0;
+	}
+	dl dd {
+		margin: 0;
+	}
+		dl.enhance dd {
+			-webkit-transition: height 0.4s ease;
+			overflow: hidden;
+		}
+		dl.enhance dd.closed {
+			height: 0;
+		}
