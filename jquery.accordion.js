@@ -5,14 +5,27 @@
 		ddHeight = new Array();
 		
 		el.addClass('enhance');
-
-		el.find('dd').each(function(i){
+		
+		el.find('dd').each(function(i) {
 			var dd = $(this);
 			ddHeight[i] = dd.height();
-			dd.addClass('closed')
+			dd.addClass('closed');
 		});
 		
-		el.find('dt a').bind('touchstart', function(e) {
+		var hash = location.hash;
+		var hasHash = el.find('dt a[href="'+hash+'"]');
+		
+		if (hasHash.length) {
+			var toExpand = hasHash.parent().next('dd');
+			var i = toExpand.index('dd');
+			
+			toExpand
+				.attr('id', 'active')
+				.css('height', ddHeight[i]+'px')
+				.removeClass('closed');
+		}
+		
+		el.find('dt a').bind('click', function(e) {
 			e.preventDefault();
 			
 			var toExpand = $(this).parent().next('dd');
@@ -23,6 +36,8 @@
 					.removeAttr('id')
 					.removeAttr('style')
 					.addClass('closed');
+					
+				location.hash = '';
 			} else {
 				var active = toExpand.parent().find('#active');
 
@@ -37,6 +52,8 @@
 					.attr('id', 'active')
 					.css('height', ddHeight[i]+'px')
 					.removeClass('closed');
+					
+				location.hash = $(this).attr('href');
 			}
 		});
 	}
