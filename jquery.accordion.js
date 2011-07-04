@@ -25,7 +25,7 @@
 				.removeClass('closed');
 		}
 		
-		el.find('dt a').bind('click', function(e) {
+		el.find('dt a').bind('touchstart', function(e) {
 			e.preventDefault();
 			
 			var toExpand = $(this).parent().next('dd');
