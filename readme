@@ -5,18 +5,12 @@ Usage
 $('dl').accordion();
 
 <dl>
-	<dt><a href="">Your link title</a></dt>
+	<dt id="c1"><a href="#c1">Your link title</a></dt>
 	<dd>
 		<p>Your content.</p>
 	</dd>
-	<dt><a href="">Your link title</dt>
+	<dt id="c2"><a href="#c2">Your link title</dt>
 	<dd>
 		<p>Your content.</p>
 	</dd>
 </dl>
-
-
-
-To-do
-
-- Add :target selector/hash fragment support for RESTful url usage
